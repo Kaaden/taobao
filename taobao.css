@@ -1,0 +1,149 @@
+body, div, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, p, pre, fieldset, lengend, textarea, th, td {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    line-height: 1.7;
+    font-family: "Monospaced Number", "Chinese Quote", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.swiper-container {
+    width: 100%;
+    height: 375px;
+}
+
+img {
+    width: 100%;
+}
+
+.swiper-pagination-bullet-active {
+    background: #ff5000 !important;
+}
+
+.layout {
+    padding: .8rem .6rem;
+}
+
+.title {
+    line-height: 1.4;
+    font-size: .9rem;
+    font-weight: 400;
+}
+
+.line {
+    overflow: hidden!important;
+    text-overflow: ellipsis!important;
+    -webkit-box-orient: vertical!important;
+    display: -webkit-box!important;
+}
+
+.line1 {
+    -webkit-line-clamp: 1!important;
+}
+
+.line2 {
+    -webkit-line-clamp: 2!important;
+}
+
+.line3 {
+    -webkit-line-clamp: 3!important;
+}
+
+.price::before {
+    content: '￥';
+    display: inline-block;
+    font-size: .8rem;
+    text-indent: .3rem;
+}
+
+.price {
+    font-size: 1.2rem;
+    color: #ff5000;
+}
+
+.old-price {
+    display: flex;
+    align-items: center;
+    color: #999;
+    font-size: .4rem;
+}
+
+.layout-middle {
+    width: 100%;
+    height: 1rem;
+    background: #eee;
+}
+
+.shop {
+    display: flex;
+}
+
+.shop-logo {
+    width: 2.8rem;
+    border: 1px solid #d9d9d9;
+}
+
+.shop-title {
+    font-size: .8rem;
+    margin-left: 1rem;
+}
+
+.shop-btn {
+    border: 1px solid #ff5000;
+    color: #ff5000;
+    width: 4.5rem;
+    height: 1.2rem;
+    font-size: .7rem;
+    margin: 1rem auto;
+    text-align: center;
+    line-height: 1.2rem;
+    border-radius: .2rem;
+}
+
+.desc {
+    font-size: .8rem;
+    color: #ff5000;
+}
+
+.layout-desc {
+    font-size: .8rem;
+    word-break: break-all;
+    word-wrap: break-word;
+    white-space: pre-wrap;
+}
+
+.footer {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 999;
+    height: 2.8rem;
+}
+
+.footer img {
+    height: 2.8rem;
+}
+
+.demo-class {
+    background-color: #fff !important;
+    border-radius: 5px;
+    box-shadow: 0 0 8px rgba(0,0,0,.1);
+    height:12rem;
+    width:80%;
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content: center;
+}
+.layer-title{
+    color: #686868;
+    font-size: .8rem;
+    width:100%;
+    text-align: center;
+}
+.layer-content{
+    color: #ff5000;
+    margin-top:1rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+}

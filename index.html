@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
+    <title>Document</title>
+    <link href="http://kaaden.orrzt.com/taobao.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.2/css/swiper.min.css">
+
+</head>
+
+<body>
+    <div style="width:100%;overflow: hidden;">
+
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img
+                        src="http://img.alicdn.com/imgextra/i4/3501449608/TB23Q3JsZIrBKNjSZK9XXagoVXa_!!3501449608.jpg" />
+                </div>
+                <div class="swiper-slide"><img
+                        src="http://img.alicdn.com/imgextra/i4/3501449608/TB23Q3JsZIrBKNjSZK9XXagoVXa_!!3501449608.jpg" />
+                </div>
+                <div class="swiper-slide"><img
+                        src="http://img.alicdn.com/imgextra/i1/3501449608/TB2CpP5tnqWBKNjSZFAXXanSpXa_!!3501449608.jpg" />
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
+            <!--分页器。如果放置在swiper-container外面，需要自定义样式。-->
+        </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.2/js/swiper.min.js"></script>
+        <script language="javascript">
+            var mySwiper = new Swiper('.swiper-container', {
+                observer: true,
+                autoplay: true,
+                pagination: {
+                    el: '.swiper-pagination',
+                },
+            })
+        </script>
+    </div>
+
+    <!-- 标题价格 -->
+    <div class="layout">
+        <div class="title line line2">
+            Mideer弥鹿儿童神奇万花筒多棱镜怀旧科学玩Mideer弥鹿儿童神奇万花筒多棱镜怀旧科学玩具宝宝生日礼物3Mideer弥鹿儿童神奇万花筒多棱镜怀旧科学玩具宝宝生日礼物3具宝宝生日礼物3-6岁</div>
+        <div class="price">332.3</div>
+        <div class="old-price">
+            <div>价格</div>
+            <div>:￥</div>
+            <div style="text-decoration: line-through">33-43</div>
+        </div>
+    </div>
+
+
+    <div class="layout-middle"></div>
+    <!-- 店铺 -->
+    <div class="layout">
+        <div class="shop">
+            <div class="shop-logo"><img src="http://img.alicdn.com/imgextra//ca/64/TB1xOv.bYYI8KJjy0FaSuvAiVXa.jpg" />
+            </div>
+            <div class="shop-title">客服积分</div>
+        </div>
+        <div class="shop-btn">进店逛逛</div>
+    </div>
+
+    <div class="layout-middle"></div>
+    <!-- 详情 -->
+    <div class="layout">
+        <div class="desc">图文详情</div>
+    </div>
+    <div class="layout-middle"></div>
+
+    <div class="layout">
+        <div id="txt-img" class="layout-desc"></div>
+    </div>
+    <div style="height:2.8rem"></div>
+    <!-- 底部 -->
+    <div class="footer" id="footer"><img src="http://kaaden.orrzt.com/tb.png" /></div>
+
+    <script src="http://kaaden.orrzt.com/jquery-2.1.4.min.js"></script>
+    <script src="http://kaaden.orrzt.com/taobao.js"></script>
+    <script type="text/javascript" src="https://cdn.bootcss.com/layer/2.3/layer.js"></script>
+    <script>
+        const list = [{ content: "进店逛逛进店逛逛进店逛逛进店逛逛进店逛逛进店逛逛asdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdf", label: "text" },
+        { content: "https://img.alicdn.com/imgextra/i3/3501449608/TB2DjV_tmMmBKNjSZTEXXasKpXa_!!3501449608.jpg", label: "img" }
+        ]
+        window.onload = function () {
+            fontSize()
+            DoList()
+        }
+        window.resizeTo = function () {
+            fontSize()
+        }
+        function DoList() {
+            if (list.length) {
+                for (let i = 0, len = list.length; i < len; i++) {
+                    if (list[i].label === "img") {
+                        list[i].content = `<img src="${list[i].content}"/>`
+                    }
+                    document.getElementById("txt-img").innerHTML += list[i].content;
+                }
+            }
+        }
+
+        document.getElementById("footer").onclick = function () {
+
+
+            Copy_Taobao("￥OBKyY1N1G5l￥")
+            //页面层-自定义
+            layer.open({
+                type: 1,
+                title: false,
+                closeBtn: 0,
+                shadeClose: true,
+                skin: 'demo-class',
+                content: '<div><div class="layer-title"> 淘口令已复制</div><div class="layer-content"> 请打开手机淘宝购买</div></div>'
+            });
+
+        }
+
+
+
+        function Copy_Taobao(str) {
+            const input = document.createElement("input");
+            input.readOnly = 'readonly';
+            input.value = str;
+            document.body.appendChild(input);
+            input.select();
+            input.setSelectionRange(0, input.value.length);
+            document.execCommand('Copy');
+            document.body.removeChild(input);
+        }
+    </script>
+
+</body>
+
+</html>
